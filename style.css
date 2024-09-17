@@ -1,0 +1,478 @@
+@font-face {
+  font-family: 'Vogue';
+  src: url('public/fonts/Vogue.ttf') format('truetype'); /* Adjust the path and format based on your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NunitoSans';
+  src: url('public/fonts/NunitoSans.ttf') format('truetype'); /* Adjust the path and format based on your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+:root{
+  --gold:#e4ad2c;
+}
+
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  transition:all .2s linear;
+  text-transform: capitalize;
+  font-family: 'NunitoSans';
+}
+
+h1{
+  font-family: 'vogue';
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: 1.7rem;
+  color:#444;
+  margin:2rem 0;
+  padding-top: 6rem;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--gold);
+  text-underline-offset:-1.4rem;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  background:#fff;
+  z-index: 100;
+  padding:1rem 2rem;
+  box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+}
+
+
+.page-logo {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100%; /* Ensure the container has enough height */
+}
+
+.page-logo img {
+  height: 8rem;
+  margin-bottom: 1rem; /* Add some space between the logo and the title */
+}
+
+.page-logo p {
+  color: var(--gold);
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Vogue';
+}
+
+
+.header nav ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin:0; padding:0;
+}
+
+.header nav ul li{
+  margin: 0 2rem;
+}
+
+.header nav ul li a{
+  font-size: 2rem;
+  font-family: 'vogue';
+  color:#666;
+}
+
+.header nav ul li a:hover{
+  color:var(--gold);
+  text-decoration: none;
+}
+
+.header .fa-bars{
+  font-size: 2.5rem;
+  color:#666;
+  cursor: pointer;
+  display: none;
+}
+
+
+.home .hero{
+  min-height: 60vh;
+  background: url(public/images/cover.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.home .row{
+  margin:0;
+}
+
+.home .hero .text1{
+  font-size: 5rem;
+  font-family: 'vogue';
+  width:45rem;
+  background:#fff;
+  padding:1rem;
+  text-align: center;
+  opacity: .8;
+}
+
+.home .hero .text2{
+  font-size: 3rem;
+  font-family: 'vogue';
+  width:max-content;
+  background:var(--gold);
+  padding:1rem;
+  text-align: center;
+  opacity: .8;
+  margin-top: 1rem;
+  color:#fff;
+}
+
+
+.home .counting{
+  min-height: 40vh;
+  padding:2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home .counting .box{
+  margin: 2rem 4rem;
+  text-align: center;
+}
+
+.home .counting .box .count{
+  font-size: 7rem;
+  color:#444;
+}
+
+.home .counting .box h3{
+  font-size: 2rem;
+  color:var(--gold);
+}
+
+.about{
+  /* min-height: 100vh; */
+  padding-bottom: 3rem;
+}
+
+.about .image{
+  padding:2rem;
+}
+
+.about .image video{
+  height:45rem;
+  object-fit: cover;
+  box-shadow: 2.5rem 2.5rem 0 1rem var(--gold);
+}
+
+.about .info{
+  padding:2rem;
+  margin-top: 3rem;
+}
+
+.about .info h2{
+  color:var(--gold);
+  font-size: 3rem;
+}
+
+.about .info p{
+  font-size: 1.6rem;
+  color:#444;
+  margin:2rem 0;
+}
+
+.about .info .icons a{
+  font-size: 2rem;
+  height: 4rem;
+  width:4rem;
+  line-height: 4rem;
+  text-align: center;
+  background:#333;
+  color:#fff;
+  border-radius: .5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.about .info .icons a:hover{
+  background:var(--gold);
+}
+
+.service{
+  min-height: 100vh;
+  background-color: #fff9f9;
+}
+
+.service .box-container{
+  width:90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.service .box-container .box{
+  background-color: #fff;
+  height:25rem;
+  width:45rem;
+  box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+  border-left: .5rem solid var(--gold);
+  border-right: .5rem solid var(--gold);
+  border-radius: .5rem;
+  text-align: center;
+  padding-top: 2rem;
+  margin:2rem 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(0);
+  perspective: 1000px; /* To ensure the 3D effect is noticeable */
+  cursor: pointer;
+}
+
+.service .box-container .box:hover{
+  transform: translateZ(40px); /* Adjust the value as needed */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow for more depth */
+}
+
+.service .box-container .box .fas{
+  color:var(--gold);
+  font-size: 5rem;
+}
+
+.service .box-container .box h5{
+  margin-top: 1rem ;
+  font-weight: bold;
+  color: var(--gold);
+  font-size: 2rem;
+}
+
+.service .box-container .box p{
+  color:#333;
+  font-size: 1.5rem;
+  margin:1rem 1rem;
+  max-width: max-content;
+}
+
+.project{
+  min-height:100vh;
+  background:#333;
+}
+
+.project .heading{
+  color:#fff;
+}
+
+.project .box-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project .box-container .box{
+  height:30rem;
+  width:40rem;
+  border-radius: .5rem;
+  margin:2rem;
+  overflow: hidden;
+  box-shadow: 0 .3rem .5rem #000;
+}
+
+.project .box-container .box img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.project .box-container .box:hover img{
+  transform: scale(1.3);
+}
+
+
+.contact{
+  min-height: 40rem;
+}
+
+.contact-box-container{
+  width:93%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-box-container .contact-box{
+  height:15rem;
+  flex:1 0 30rem;
+  margin:2rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.2);
+  border-radius: .5rem;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.contact-box-container .contact-box i{
+  color:var(--gold);
+  font-size: 4rem;
+}
+
+.contact-box-container .contact-box h3{
+  font-size: 1.8rem;
+  color:#444;
+  margin:2rem 0;
+}
+
+.footer{
+  background:#333;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 100%; /* Ensure the container has enough height */
+}
+
+.footer-logo img {
+  height: 8rem;
+  margin-bottom: 1rem; /* Add some space between the logo and the title */
+}
+
+.footer-logo h6 {
+  color: var(--gold);
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Vogue';
+}
+
+.footer .row{
+  width:100%;
+  margin-left: 0;
+  padding:1rem;
+}
+
+.footer .row .col-md-3{
+  margin:1rem 0;
+}
+
+.footer h2{
+  font-size: 2.5rem;
+  color:#fff;
+}
+
+.footer p{
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.footer .list{
+  display: flex;
+  flex-flow: column;
+}
+
+.footer .list a{
+  color:#ccc;
+  font-size: 1.7rem;
+}
+
+.footer .letter p{
+  font-size: 2rem;
+}
+
+
+.footer .credit{
+  color:var(--gold);
+}
+
+
+
+.fa-times{
+  transform: rotate(180deg);
+}
+
+/* media queries  */
+
+@media (max-width:768px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .header .fa-bars{
+    display: block;
+  }
+
+  .header nav{
+    position: fixed;
+    top:6rem; right: -120%;
+    height:calc(100vh - 6rem);
+    width:100vw;
+    background: rgba(0,0,0,.5);
+    z-index: 1000;
+    border-top: .1rem solid rgba(0,0,0,.3);
+  }
+
+  .header nav ul{
+    height: 100%;
+    width:33rem;
+    background:#fff;
+    flex-flow: column;
+    justify-content: center;
+    float: right;
+  }
+
+  .header nav ul li{
+    margin:1rem 0;
+  }
+
+  .header nav ul li a{
+    display: block;
+    padding:.5rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    width:25rem;
+    border-radius: 5rem;
+    text-align: center;
+  }
+
+  .header nav ul li a:hover{
+    background:#333;
+    color:#fff;
+  }
+
+  .header .nav-toggle{
+    right: 0%;
+  }
+
+}
+
+@media (max-width:600px){
+  .home .hero .text1{
+    font-size: 3.5rem;
+    width: 33rem;
+  }
+  .home .hero .text2{
+    font-size: 2.5rem;
+    width: 30rem ;
+  }
+}
