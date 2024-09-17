@@ -7,10 +7,6 @@ Welcome to **Lions Deco**, a website for a remodeling company offering interior 
 - [Features](#features)
 - [Technologies](#technologies)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 You can view a live demo of the project [here](#) (replace with the actual URL if hosted).
@@ -29,5 +25,3 @@ You can view a live demo of the project [here](#) (replace with the actual URL i
 - **jQuery**: For dynamic content and user interaction.
 - **Bootstrap**: To quickly style components and ensure a responsive design.
 
-## Installation
-To get this project up and running on your local machine, follow these simple steps:
