@@ -25,7 +25,7 @@ You can view a live demo of the project [here](#) (replace with the actual URL i
 
 ## Technologies
 - **HTML5**: For the website's structure.
-- **CSS3** (TailwindCSS): For styling and layout.
+- **CSS3** : For styling and layout.
 - **jQuery**: For dynamic content and user interaction.
 - **Bootstrap**: To quickly style components and ensure a responsive design.
 
