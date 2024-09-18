@@ -53,7 +53,7 @@ body{
   align-items: center;
   justify-content: space-between;
   width:100%;
-  background:#444;
+  background:#333333;
   color:#fff;
   z-index: 100;
   padding:1rem 2rem;
@@ -95,16 +95,65 @@ body{
   
 }
 
-.header nav ul li a{
+.header nav ul li .nav-el{
   font-size: 2.5rem;
   font-family: 'vogue';
   color:var(--gold);
-}
-
-.header nav ul li a:hover{
-  color:var(--gold);
   text-decoration: none;
 }
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--gold);
+  color: #000; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  font-family: 'vogue';
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+}
+
+.contact-btn i {
+  margin-right: 10px;
+}
+
+/* Add hover effect for button */
+.contact-btn:hover {
+  background-color: var(--gold);
+  text-decoration: none;
+  color: #fff;
+
+}
+
+/* Animation keyframes for ringing effect */
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Apply the ringing effect to the button */
+.contact-btn.ringing {
+  animation: ring 1s ease-in-out infinite;
+}
+
 
 .header .fa-bars{
   font-size: 2.5rem;
@@ -271,9 +320,10 @@ body{
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a stronger shadow for more depth */
 }
 
-.service .box-container .box .fas{
+.service .box-container .box img{
   color:var(--gold);
-  font-size: 5rem;
+  width: 70px;
+  height: 70px;
 }
 
 .service .box-container .box h5{
@@ -314,17 +364,8 @@ body{
   box-shadow: 0 .3rem .5rem #000;
 }
 
-/* .project .box-container .box img{
-  height:100%;
-  width:100%;
-  object-fit: cover;
-}
-
-.project .box-container .box:hover img{
-  transform: scale(1.3);
-} */
 .swiper-slide{
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .slider-image {
   width: 100%;
@@ -519,4 +560,39 @@ body{
     font-size: 2.5rem;
     width: 30rem ;
   }
+  .service .box-container .box{
+    background-color: #fff;
+    height:30rem;
+    width:45rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+    border-left: .5rem solid var(--gold);
+    border-right: .5rem solid var(--gold);
+    border-radius: .5rem;
+    text-align: center;
+    padding-top: 2rem;
+    margin:2rem 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateZ(0);
+    perspective: 1000px; /* To ensure the 3D effect is noticeable */
+    cursor: pointer;
+  }
+
+  
+  .footer-logo {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    height: 100%; /* Ensure the container has enough height */
+    align-items: flex-start;
+    margin-left: 30rem;
+  }
+
+  .footer .row .col-md-3{
+    margin:1rem 0;
+  }
+  .footer .list p i{
+    margin:0;
+    color: var(--gold);
+  }
+
+
 }
