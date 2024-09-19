@@ -363,15 +363,33 @@ body{
   overflow: hidden;
   box-shadow: 0 .3rem .5rem #000;
 }
-
+/* 
 .swiper-slide{
   margin: 0 5px;
 }
 .slider-image {
   width: 100%;
-  height: 500px; /* Adjust the height to your preference */
-  /* object-fit: cover; Ensures the images are cropped but not distorted */
+  height: 500px;
+} */
+
+
+/* Ensure the swiper container takes full width */
+.swiper-container {
+  width: 100%;
+  height: auto;
 }
+
+.swiper-slide {
+  margin: 0 0.5px;
+}
+
+/* Adjust the slider image size */
+.slider-image {
+  width: 100%;
+  height: 300px; /* Default height */
+  object-fit: cover; /* Ensure the images are cropped but not distorted */
+}
+
 
 .contact{
   min-height: 40rem;
@@ -548,7 +566,21 @@ body{
   .header .nav-toggle{
     right: 0%;
   }
+  .footer-logo {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    height: 100%; /* Ensure the container has enough height */
+    align-items: flex-start;
+    margin-left: 30rem;
+  }
 
+  .footer .row .col-md-3{
+    margin:1rem 0;
+  }
+  .footer .list p i{
+    margin:0;
+    color: var(--gold);
+  }
 }
 
 @media (max-width:600px){
@@ -577,22 +609,24 @@ body{
     cursor: pointer;
   }
 
-  
-  .footer-logo {
-    display: flex;
-    flex-direction: column; /* Align items vertically */
-    height: 100%; /* Ensure the container has enough height */
-    align-items: flex-start;
-    margin-left: 30rem;
+
+
+  .swiper-container{
+    max-width: 100%;
+  }
+  .slider-image {
+    height: 200px; /* Reduce image height for smaller screens */
   }
 
-  .footer .row .col-md-3{
-    margin:1rem 0;
-  }
-  .footer .list p i{
-    margin:0;
-    color: var(--gold);
+  /* Adjust heading size for mobile */
+  .heading {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
   }
 
+  /* Adjust spacing between slides */
+  .swiper-slide {
+    margin: 0 2px;
+  }
 
 }
