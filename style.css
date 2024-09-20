@@ -363,24 +363,22 @@ body{
   overflow: hidden;
   box-shadow: 0 .3rem .5rem #000;
 }
-/* 
-.swiper-slide{
-  margin: 0 5px;
-}
-.slider-image {
-  width: 100%;
-  height: 500px;
-} */
 
 
-/* Ensure the swiper container takes full width */
+/* Ensure the swiper container takes full width without overflowing */
 .swiper-container {
   width: 100%;
   height: auto;
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.swiper-wrapper {
+  display: flex; /* Ensure proper alignment of slides */
 }
 
 .swiper-slide {
   margin: 0 0.5px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
 
 /* Adjust the slider image size */
@@ -566,6 +564,8 @@ body{
   .header .nav-toggle{
     right: 0%;
   }
+
+
   .footer-logo {
     display: flex;
     flex-direction: column; /* Align items vertically */
@@ -584,6 +584,10 @@ body{
 }
 
 @media (max-width:600px){
+
+  .header .nav-toggle{
+    right: 0%;
+  }
   .home .hero .text1{
     font-size: 3.5rem;
     width: 33rem;
@@ -609,24 +613,5 @@ body{
     cursor: pointer;
   }
 
-
-
-  .swiper-container{
-    max-width: 100%;
-  }
-  .slider-image {
-    height: 200px; /* Reduce image height for smaller screens */
-  }
-
-  /* Adjust heading size for mobile */
-  .heading {
-    font-size: 2.5rem;
-    letter-spacing: 1rem;
-  }
-
-  /* Adjust spacing between slides */
-  .swiper-slide {
-    margin: 0 2px;
-  }
 
 }

@@ -283,32 +283,28 @@
 <script src="main.js"></script>
 
 <script>
-  const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-    // Autoplay
-    autoplay: {
-      delay: 4000,
+const swiper = new Swiper('.swiper-container', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay: {
+    delay: 4000,
+  },
+  effect: 'slide',
+  breakpoints: {
+    320: {
+      slidesPerView: 1, // Show 1 slide on screens <= 320px
     },
-
-    // Effect
-    effect: 'slide',// You can also use 'fade', 'cube', etc.
-
-    // Responsive breakpoints
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    }
-  });
+    640: {
+      slidesPerView: 1, // Show 1 slide on small screens
+    },
+    768: {
+      slidesPerView: 2, // Show 2 slides on medium screens
+    },
+    1024: {
+      slidesPerView: 4, // Show 3 slides on large screens
+    },
+  }
+});
 </script>
 
 
