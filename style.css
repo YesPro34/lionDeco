@@ -24,9 +24,6 @@
   font-family: 'NunitoSans';
 }
 
-h1{
-  font-family: 'vogue';
-}
 
 html{
   font-size: 62.5%;
@@ -48,6 +45,7 @@ body{
   text-decoration-style: solid;
   text-decoration-color: var(--gold);
   text-underline-offset:-1.4rem;
+  font-family: 'vogue';
 }
 
 .header{
@@ -505,10 +503,12 @@ body{
 }
 
 .credit{
-  height: 3rem;
+  height: 4.5rem;
 }
-.credit h1{
+.credit p{
   color:var(--gold);
+  font-family: "vogue";
+  font-size: 3rem;
 }
 
 
