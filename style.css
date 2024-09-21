@@ -3,12 +3,14 @@
   src: url('public/fonts/Vogue.ttf') format('truetype'); /* Adjust the path and format based on your font file */
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'NunitoSans';
   src: url('public/fonts/NunitoSans.ttf') format('truetype'); /* Adjust the path and format based on your font file */
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 :root{
   --gold:#e4ad2c;
@@ -166,7 +168,7 @@ body{
 .home .hero{
   min-height: 60vh;
   position: relative;
-  background: url(public/images/cover.jpg) no-repeat;
+  background: url(public/images/cover.webp) no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
