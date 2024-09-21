@@ -9,6 +9,16 @@ for = "/*.css"
 Cache-Control = "max-age=2592000"
 
 [[headers]]
-for = "/images/*"
+for = "/public/images/*"
+[headers.values]
+Cache-Control = "max-age=31536000"
+
+[[headers]]
+for = "/public/fonts/*"
+[headers.values]
+Cache-Control = "max-age=31536000"
+
+[[headers]]
+for = "/public/videos/*"
 [headers.values]
 Cache-Control = "max-age=31536000"
