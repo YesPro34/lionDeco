@@ -240,16 +240,16 @@ body{
 }
 
 .about{
-  /* min-height: 100vh; */
   padding-bottom: 3rem;
 }
+
 
 .about .image{
   padding:2rem;
 }
 
 .about .image video{
-  height:45rem;
+  height:50rem;
   object-fit: cover;
   box-shadow: 2.5rem 2.5rem 0 1rem var(--gold);
 }
@@ -410,6 +410,9 @@ body{
   border-radius: .5rem;
   text-align: center;
   padding-top: 4rem;
+}
+.contact-box-container .contact-box a{
+  text-decoration: none;
 }
 
 .contact-box-container .contact-box i{
